@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <!--viewport-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--オリジナルcss-->
+        <link rel="stylesheet" href="popup.css">
+    </head>
+    <body>
+        <input type="checkbox" id="displayManager" style="height: 0; opacity: 0;">
+        <section class="input-section input--default">
+            <div class="input-item">
+                <h2 class="input-title">ユーザーIDを入力してください</h2>
+                <input type="text" class="input-field input-field--userId--default" placeholder="ユーザーIDを入力…">
+            </div>
+            <div class="input-item">
+                <h2 class="input-title">トークンを入力してください</h2>
+                <input type="password" class="input-field input-field--token--default" placeholder="トークンを入力…">
+            </div>
+            <button class="button button--submit--default">休講・教室変更情報を<wbr />取得する</button>
+        </section>
+        <section class="input-section input--manager">
+            <p class="input-disc">入力されたユーザーIDとトークンを<wbr />あなたの端末(chrome.storage)に保存します。</p>
+            <div class="input-item">
+                <h2 class="input-title">ユーザーIDを入力してください</h2>
+                <input type="text" class="input-field input-field--userId--manager" placeholder="ユーザーIDを入力…">
+            </div>
+            <div class="input-item">
+                <h2 class="input-title">トークンを入力してください</h2>
+                <input type="password" class="input-field input-field--token--manager" placeholder="トークンを入力…">
+            </div>
+            <button class="button button--submit--manager">ユーザーIDとトークンを<wbr />保存する</button>
+        </section>
+        <footer class="footer">
+            <div class="footer-container">
+                <label for="displayManager">
+                    <span role="button" class="button button--strage"></span>
+                </label>
+                <label>
+                    <span role="button" class="button button--delete">情報を削除する</span>
+                </label>
+            </div>
+        </footer>
+    </body>
+    <script src="popup.js" defer></script>  
+</html>

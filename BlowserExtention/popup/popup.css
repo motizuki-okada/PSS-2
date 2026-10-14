@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+/*----------------------------------------*/
+@font-face {
+    font-family: "Noto Sans JP";
+    src: url("../fonts/NotoSansJP-VariableFont_wght.ttf") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-display: swap;
+}
+body {
+    scroll-behavior: smooth;
+    width: 400px;
+    background-color: #EBF0FF;
+    color: black;
+    line-height: 1.5;
+    font-weight: 400;
+    overflow-y: auto;
+    font-family: "Noto Sans JP", sans-serif;
+}
+a {
+    display: block;
+    color: #43474A;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+label{
+    display: block;
+}
+input{
+    display: block;
+}
+li {
+    list-style: none !important;
+    color: #43474A;
+}
+img {
+    display: block;
+}
+span {
+    display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+/*----------------------------------------*/
+
+.input-section{
+    width: 90%;
+    margin: 0 auto;
+}
+.input--default{
+    height: auto; 
+    opacity: 1; 
+    visibility: visible; 
+    overflow: visible;
+}
+.input--manager{
+    height: 0; 
+    opacity: 0; 
+    visibility: hidden; 
+    overflow: hidden;   
+}
+.footer{
+    width: 95%;
+    margin: 30px auto 0;
+}
+/*----------------------------------------*/
+
+.input-item{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.input-disc{
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.input-title{
+    font-size: 17px;
+    font-weight: 400;
+}
+.input-field{
+    width: 70%;
+    font-size: 16px;
+    background-color: white;
+    padding: 5px;
+    border: .5px solid black;
+    border-radius: 5px;
+}
+.footer-container{
+    display: flex;
+    justify-content: right;
+}
+.button{
+    color: white;
+    width: fit-content;
+    background-color: #475aba;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    transition: transform 0.3s;
+    border: 0.8px solid black;
+}
+.button--submit{
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+.button--strage{
+    color: black;
+    background-color: white;
+    font-size: 10px;
+    padding: 3px 5px;
+
+    &::before {
+        content: "情報保存ページへ";
+    }
+}
+.button--delete{
+    color: black;
+    background-color: white;
+    margin-left: 15px;
+    font-size: 10px;
+    padding: 3px 5px;
+}
+/*----------------------------------------*/
+
+.button:hover,
+.button:focus-visible
+{
+    background-color: #70bafa;
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+#displayManager:checked ~.input--default{
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+#displayManager:checked ~.input--manager{
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+}
+#displayManager:checked ~footer .button--strage{
+    &::before {
+        content: "読み込みページへ";
+    }
+}
